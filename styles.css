@@ -1,0 +1,84 @@
+/*Reset*/
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'futura';
+  font-size: 1rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+/* Main */
+:root {
+  --primary-color: #ffffff
+;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul, p {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: opacity .15s ease-in-out;
+  transition: opacity .15s ease-in-out;
+  font-weight: 600;
+  color: inherit;
+}
+
+a:hover {
+  opacity: .7;
+}
+
+img {
+  width: 100%;
+}
+
+/* Block */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_logo {
+  width: 25%;
+}
+
+.header_nav {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  left: 12%;
+}
+
+.hero {
+  background-image: url(./images/backgrounds/hero-bg-texture.png);
+}
+
+.hero_card {
+  width: 75%;
+}
+
+/* Inline */
+/*# sourceMappingURL=styles.css.map */

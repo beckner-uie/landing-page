@@ -1,0 +1,73 @@
+/*Reset*/
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'futura';
+    font-size: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+
+/* Main */
+:root {
+    --primary-color: #ffffff
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+ul, p {
+    margin: 0;
+    padding: 0;
+}
+p {
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+    transition: opacity .15s ease-in-out;
+    font-weight: 600;
+    color: inherit;
+}
+a:hover {
+    opacity: .7;
+}
+img {
+    width: 100%;
+}
+/* Block */
+.header {
+    display: flex;
+    &_logo {
+        width: 25%;
+    }
+    &_nav {
+        justify-content: flex-start;
+        position: relative;
+        left: 12%;
+    }
+}
+.hero {
+    background-image: url(./images/backgrounds/hero-bg-texture.png);
+    &_card {
+        width: 75%;
+    }
+}
+.features {
+
+}
+.products {
+
+}
+.footer {
+
+}
+/* Inline */
