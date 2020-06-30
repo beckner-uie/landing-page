@@ -211,15 +211,24 @@ img {
     .header {
         padding: 5%;
         display: flex;
+        flex-flow: row nowrap;
         width: 100%;
         &_logo {
             width: 25%;
         }
         &_nav {
+            width: 60%;
             display: flex;
-            flex-flow: row nowrap;
-            position: absolute;
-            right: 0;
+            flex-direction: row;
+            ul {
+                width: 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-evenly;
+            }
+            li {
+                margin: auto;
+            }
             a {
                 display: initial;
               }
