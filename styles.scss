@@ -45,29 +45,184 @@ img {
 }
 /* Block */
 .header {
+    padding: 5%;
     display: flex;
     &_logo {
-        width: 25%;
+        width: 55%;
     }
     &_nav {
+        overflow: hidden;
+        background-color: white;
+        position: relative;
+        display: flex;
         justify-content: flex-start;
         position: relative;
-        left: 12%;
+        left: 20%;
+        a {
+            display: none;
+          }
+        a:icon {
+            
+        }
     }
 }
 .hero {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
     background-image: url(./images/backgrounds/hero-bg-texture.png);
+    background-size: cover;
     &_card {
-        width: 75%;
+        display: flex;
+        margin-top: 10%;
+        width: 100%;
+        border-radius: 6px;
+        box-shadow: 0px 0px 10px 0px #888888;
+    }
+    h1 {
+        width: 50%;
     }
 }
 .features {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    margin: 200px auto 0px auto;
+    h2 {
+        /* standard gradient background */
+        background-image: linear-gradient(to bottom left, #AB00FF, #007BFF);
+        /* clip hackery */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 5% 0%;
+        width: 100%
+    }
+    &_card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0px 0px 10px 0px #888888;
+        border-radius: 6px;
+        margin-bottom: 5%;
+        p {
+            width: 50%;
+            margin: auto auto;
+        }
+        img {
+            width: 5%;
+            margin: 10px 5%;
+        }
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        &_dashboard {
+            margin-top: 5%;
+            box-shadow: 0px 0px 10px 0px #888888;
+            border-radius: 10px;
+            display: flex;
 
+        }
+    }
 }
 .products {
-
+    margin-top: 200px;
+    padding: 5%;
+    display: flex;
+    flex-flow: row wrap;
+    h2 {
+        /* standard gradient background */
+        background-image: linear-gradient(to bottom left, #AB00FF, #007BFF);
+        /* clip hackery */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10%; 
+    }
+    &_logo {
+        margin: 5% auto;
+        padding: 0px 20px;
+        width: 40%;
+    }
 }
 .footer {
-
+    background-image: url(./images/backgrounds/footer-bg-texture.png), linear-gradient(to bottom left, #AB00FF, #007BFF);
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 5%;
+    position: relative;
+    color: white;
+    font-family: 'futura';
+    font-weight: bold;
+    h2 {
+        text-align: center;
+        padding: 10% 0px;
+    }
+    &_input_email {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 0px auto;
+        width: 100%;
+        input {
+            height: 2rem;
+            width: 60%;
+            border-radius: 30px;
+            background-color: rgba($color: #ffffff, $alpha: 0.5);
+            padding: 15px;
+            font-family: 'futura';
+            font-weight: bold;
+            font-size: .7em;
+            border: none;
+            margin: auto;
+            color: white;
+        }
+        ::placeholder {
+            color: white;
+            opacity: 0.5;
+        }
+        &_button {
+            padding: 0;
+            height: 2rem;
+            margin: auto;
+            border-radius: 30px;
+            width: 100px;
+            font-family: 'futura';
+            font-weight: bold;
+            font-size: .5em;
+            text-transform: uppercase;
+            border: none;
+            color: #AB00FF;
+        }
+    }
+    &_nav {
+        ul {
+            margin-top: 35%;
+            text-align: right;
+        }
+        li {
+            margin: 10px 0px;
+        }
+    }
 }
-/* Inline */
+/* Desktop Styles */
+@media screen and (min-width: 480px) {
+    .header {
+        padding: 5%;
+        display: flex;
+        width: 100%;
+        &_logo {
+            width: 25%;
+        }
+        &_nav {
+            display: flex;
+            flex-flow: row nowrap;
+            position: absolute;
+            right: 0;
+            a {
+                display: initial;
+              }
+        }
+    }
+}
