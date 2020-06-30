@@ -206,20 +206,25 @@ img {
         }
     }
 }
+
 /* Desktop Styles */
+
 @media screen and (min-width: 480px) {
     .header {
         padding: 5%;
         display: flex;
         flex-flow: row nowrap;
         width: 100%;
+        justify-content: space-between;
         &_logo {
-            width: 25%;
+            width: 15%;
         }
         &_nav {
-            width: 60%;
+            width: 50%;
+            height: 50px;
             display: flex;
             flex-direction: row;
+            margin: auto;
             ul {
                 width: 100%;
                 display: flex;
@@ -231,7 +236,98 @@ img {
             }
             a {
                 display: initial;
+                font-weight: 600;
+                font-size: 0.8em;
+                text-transform: uppercase;
               }
+        &_button {
+                color: white;
+                background-image: linear-gradient(to bottom left, #AB00FF, #007BFF);
+                border-radius: 2000px;
+                padding: 10px 30px;
+            }
+        }
+    }
+    .hero {
+        height: 50%;
+        width: 100%;
+        background-image: url(./images/backgrounds/hero-bg-cards.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-flow: column nowrap;
+        &_background {
+            width: 100%;
+            height: 60%;
+            background-image: url(./images/backgrounds/hero-bg-texture.png);
+            background-size: cover;
+        }
+        &_card {
+            width: 60%;
+            margin: 100px auto;
+        }
+        h1 {
+            width: 80%;
+            font-size: 2em;
+            margin: 0 0 100px 0;
+        }
+    }
+    .features {
+        h2 {
+            text-align: center;
+            font-size: 2em;
+        }
+        &_card {
+            width: 30%;
+            display: flex;
+            flex-flow: row nowrap;
+            p {
+                font-size: 0.8em;
+            }
+            img {
+                margin: 10px;
+                width: 15px;
+                height: 70%;
+            }
+            &_wrapper {
+                width: 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                margin: 100px 0px;
+            }
+            &_dashboard {
+                border-radius: 20px;
+            }
+        }
+    }
+    .products {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            font-size: 2em;
+            width: 40%;
+            margin: auto;
+        }
+        &_logo {
+            margin: 200px auto;
+            width: 15%;
+            &_wrapper {
+                width: 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-evenly;
+            }
+        }
+    }
+    .footer {
+        h2 {
+            text-align: center;
+            font-size: 2em;
+        }
+        &_input_email {
+            width: 40%;
         }
     }
 }
